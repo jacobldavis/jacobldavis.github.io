@@ -4,7 +4,8 @@
 :root {
     --text-color:#fff;
     --bg-color:#000;
-    --link-color:#ff6900;
+    --link-color:#1B3A1A;
+    --link-alt-color:#4E6E4D;
     --caption-color:#24292DAA;
     --title-font-family:"Crimson Text";
     --body-font-family:"Source Sans Pro";
@@ -79,6 +80,21 @@ section div.bodytext h1 {
     letter-spacing:1px
 }
 
+a,
+a:link {
+    color:var(--link-color);
+    padding:1.5%;
+}
+
+a:active,
 a:hover {
-    font-weight: bold;
+    color:var(--link-alt-color);
+}
+
+a:visited {
+    color:var(--link-color);
+}
+
+a:focus {
+    color:var(--linki-alt-color);
 }
