@@ -12,6 +12,24 @@
     --bg-image:url("./images/me.jpg");
 }
 
+body,
+html {
+    height:100%;
+    color:var(--text-color);
+    background-color:var(--bg-color);
+}
+
+body {
+    margin:0;
+    font-family:var(--body-font-family),helvetica,sans-serif;
+    padding:0;
+    font-weight:100;
+    font-feature-settings: "kern" 1;
+    text-rendering:optimizeLegibility;
+    font-feature-settings:"liga" 1;
+}
+
+
 .mainimg {
     position: relative;
     flex-grow: 2;
@@ -38,6 +56,29 @@
     font-family: var(--title-font-family);
 }
 
+.navbar {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 1rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
 section.primary {
     display: flex;
     flex-direction: row;
@@ -51,21 +92,6 @@ section.primary {
 
 section.fixed {
     height:100%;
-}
-
-body,
-html {
-    height:100%;
-    color:var(--text-color);
-    background-color:var(--bg-color);
-}
-
-body {
-    margin:0;
-    font-family:var(--body-font-family);
-    padding:0;
-    font-weight:100;
-    text-rendering:optimizeLegibility;
 }
 
 section div.bodytext{
