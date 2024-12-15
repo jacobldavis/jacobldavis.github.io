@@ -5,8 +5,36 @@
     --text-color:#fff;
     --bg-color:#000;
     --link-color:#ff6900;
+    --caption-color:#24292DAA;
     --title-font-family:"Crimson Text";
     --body-font-family:"Source Sans Pro";
+    --bg-image:url("./image/me.jpg");
+}
+
+.main {
+    position: relative;
+    flex-grow: 2;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    text-align: left;
+    color: var(--text-color);
+    background-image: var(--bg-image);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.caption {
+    display: flex;
+    align-items: center;
+    padding: 5%;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--caption-color);
+    background-blend-mode: overlay;
+    font-family: var(--title-font-family);
 }
 
 body,
