@@ -1,34 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-
-    <!-- Header -->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jacob Davis</title>
-        <link href="./images/me_cropped.jpg" rel="icon" type="image/jpg" />
-        <link rel="stylesheet" href="styles.css">
-    </head>
-
-    <body>
-        <!-- Navbar -->
-        <nav class="navbar">
-            <div class="container">
-                <h1 class="caption">Jacob Davis</h1>
-                <ul class="nav-links">
-                    <li><a href="https://www.linkedin.com/in/jacob-leig-davis/">LinkedIn</a></li>
-                    <li><a href="https://github.com/jacobldavis">GitHub</a></li>
-                    <li><a href="./resume.pdf">Resume</a></li>
-                </ul>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./images/me_cropped.jpg" rel="icon" type="image/jpg">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Jacob Davis | Portfolio</title>
+</head>
+<body>
+    <content>
+        <section id="top" class="snapsection fixed">
+            <div class="mainimg"></div>
+            <div class="caption">
+                <div>
+                    <p class="titlename">Jacob Davis</p>
+                    <p class="tagline">computer scientist &bullet; researcher &bullet; mathematician</p>
+                    <hr>
+                    <p>
+                        <a class="caption-link" href="#bodytext">About Me</a>
+                        <a class="caption-link" href="#projects">Projects</a>
+                        <a class="caption-link" href="https://www.linkedin.com/in/jacob-leig-davis/" target="_blank" onclick="captureOutboundLink('www.linkedin.com/in/jacob-leig-davis/');">LinkedIn</a>
+                        <a class="caption-link" href="https://github.com/jacobldavis/" target="_blank" onclick="captureOutboundLink('github.com/jacobldavis');">GitHub</a>
+                        <a class="caption-link" href="./resume.pdf" target="_blank" onclick="captureOutboundLink('./resume.pdf');">Resume</a>
+                    </p>
+                </div>
             </div>
-        </nav>
+        </section>
 
-        <!-- Hero -->
-         <content>
-            <section class="primary fixed">
-                <div class="mainimg" style="--bg-image: url('../images/me.jpg')"></div>
-            </section>
-         </content>
-    </body>
+        <section id="bodytext" class="snapsection">
+            <div class="bodytext">
+                <p class="description">
+                    <strong>Links:&nbsp; 
+                        <a href="https://www.linkedin.com/in/jacob-leig-davis/">LinkedIn</a> &bullet; 
+                        <a href="https://github.com/jacobldavis/">GitHub</a> &bullet; 
+                        <a href="./resume.pdf">Resume</a> &bullet;
+                        <a href="#top">Top</a>
+                    </strong>
+                </p>
+                <h1>Howdy! I'm Jacob.</h1>
+                <p class="description">I'm a sophomore studying computer science and math at Clemson University's Honors College!</p>
+                <p class="description">My primary interests include algorithms, scientific computing, and virtual reality. Outside of the classroom, I'm often doing research, helping as a teaching assistant, and playing the <a href="https://www.clemsonorchestra.org/">violin</a>!</p>
+                <p class="description">I'm comfortable coding with C++, C, Python, Java, and SystemVerilog. I've also interned with <a href="https://www.cadence.com/en_US/home.html">Cadence Design Systems</a> and <a href="https://www.clemson.edu/cecas/vipr-gs/off-road-autonomy.html">VIPR-GS</a>!</p>
+                <p class="description"> Click here to see some of my <a href = #projects>recent projects</a>!</p>
+            </div>
+        </section>
 
+        <section id="projects" class="snapsection">
+            <div class="bodytext">
+                <h1>Projects</h1>
+                <div class="projects-grid">
+                    <a class="project-link" href="https://github.com/jacobldavis/VR-61-Key-Piano" target="_blank">
+                        <div class="project">
+                            <h2>Virtual Reality Piano</h2>
+                            <p>Won the "Best Game Award" at CUhackit. Virtual reality environment built with Unity and C#!</p>
+                        </div>
+                    </a>
+                    <a class="project-link" href="https://github.com/jacobldavis/Leaftle" target="_blank">
+                        <div class="project">
+                            <h2>Leaftle</h2>
+                            <p>Won the "Best .tech Domain Award" at CUhackit. Song guessing game built with React!</p>
+                        </div>
+                    </a>
+                    <a class="project-link" href="https://github.com/jacobldavis/CVRockPaperScissorsGame" target="_blank">
+                        <div class="project">
+                            <h2>RPS Computer Vision Game</h2>
+                            <p>Vision game that tracks hand motions to play rock, papers, scissors with a CPU using PyGame, Python, and CVZone!</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="end" class="snapsection">
+            <div class="bodytext">
+                <h2>Wow, you've reached the end!</h2>
+                <p class="description"> Thanks for reading and stay tuned for more! <a href=#top>Click here to go back up!</a></p>
+            </div>
+        </section>
+
+    </content>
+</body>
 </html>
