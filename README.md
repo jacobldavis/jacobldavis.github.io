@@ -1,3 +1,3 @@
 # Jacob's Personal Website
 
-[Link](jacobldavis.com)
+jacobldavis.github.io
