@@ -160,8 +160,9 @@ section#end {
   }
 
   .caption {
-    width: 100%;
-    height: auto; 
+    width: 90%;
+    height: auto;
+    justify-content: center;
   }
 
   .caption div {
