@@ -1,3 +1,3 @@
 # Jacob's Personal Website
 
-jacobldavis.com
+[Link]{jacobldavis.com}
