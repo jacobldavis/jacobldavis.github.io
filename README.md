@@ -1,3 +1,3 @@
 # Jacob's Personal Website
 
-jacobldavis.github.io
+[jacobldavis.com](jacobldavis.github.io)
