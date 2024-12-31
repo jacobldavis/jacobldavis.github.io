@@ -108,7 +108,7 @@ section#end {
   text-align:center;
   color:var(--text-color);
   background-color:var(--caption-bg-color);
-  background-blend-mode:overlay
+  background-blend-mode:overlay;
 }
 
 .caption div {
@@ -162,7 +162,6 @@ section#end {
   .caption {
     width: 100%;
     height: auto; 
-    padding: 10px;
   }
 
   .caption div {
