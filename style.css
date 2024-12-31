@@ -11,66 +11,83 @@
   --link-alt-color:#9CAF88;
 }
 * {
-  -webkit-font-smoothing:antialiased
+  -webkit-font-smoothing: antialiased
 }
+
 html {
-  font-size:5vw;
+  font-size: 5vw;
   scroll-behavior: smooth
 }
-@media (min-width:500px) {
+
+@media (min-width: 500px) {
   html {
-    font-size:25px
+    font-size: 25px
   }
 }
-@media (max-width:360px) {
+
+@media (max-width: 360px) {
   html {
-    font-size:18px
+    font-size: 18px
   }
 }
+
 body,
 html {
-  height:100%;
-  color:var(--text-color);
-  background-color:var(--bg-color)
+  height: 100%;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
+
 body {
-  margin:0;
-  font-family:var(--body-font-family),helvetica,sans-serif;
-  padding:0;
-  font-weight:100;
-  font-feature-settings:"kern" 1;
-  text-rendering:optimizeLegibility;
-  font-feature-settings:"liga" 1;
-  -webkit-font-smoothing:subpixel-antialiased
-}
-section.snapsection {
-  display:flex;
-  flex-direction:row;
-  opacity:1;
-  background-position:50%;
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-image:var(--bg-image);
-  height:100vh;
   margin: 0;
+  font-family: var(--body-font-family),helvetica,sans-serif;
   padding: 0;
+  font-weight: 100;
+  font-feature-settings: "kern" 1;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" 1;
+  -webkit-font-smoothing: subpixel-antialiased
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+section.snapsection {
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: var(--bg-image);
+  min-height: 100%;
 }
 section.fixed {
-  height:100%
+  height: 100%
 }
+
 section div.bodytext {
-  padding:7.5%;
-  min-height:500px
+  padding: 7.5%;
+  min-height: 500px
 }
+
 section div.bodytext h1 {
-  font-family:var(--title-font-family);
-  font-weight:700;
-  font-size:200%;
-  letter-spacing:1px
+  font-family: var(--title-font-family);
+  font-weight: 700;
+  font-size: 200%;
+  letter-spacing: 1px
 }
+
+section#end {
+  margin-top: 200px;
+}
+
 .mainimg {
   position: relative;
-  flex: 2;
+  flex-grow: 2;
   left: 0;
   top: 0;
   height: 100%;
@@ -78,11 +95,12 @@ section div.bodytext h1 {
   text-align: left;
   color: var(--text-color);
   background-image: url('./images/me_scene2.jpg'); 
-  background-position: top;
+  background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--caption-bg-color);
 }
+
 .caption {
   display:flex;
   align-items:center;
@@ -92,9 +110,13 @@ section div.bodytext h1 {
   background-color:var(--caption-bg-color);
   background-blend-mode:overlay
 }
+
 .caption div {
-  padding-bottom:200px
+  padding-bottom: 200px;
+  max-width: 400px;
+  text-align: center;
 }
+
 .caption p {
   margin:0
 }
@@ -103,25 +125,60 @@ section div.bodytext h1 {
   display: block; 
   margin-bottom: 10px;
 }
+
 .caption p.titlename {
-  font-weight:700;
-  font-size:200%
+  font-weight: 700;
+  font-size: 200%
 }
+
 .caption p.tagline,
 .caption p.titlename {
-  font-family:var(--title-font-family);
-  letter-spacing:1px
+  font-family: var(--title-font-family);
+  letter-spacing: 1px
 }
+
 .caption p.tagline {
-  font-weight:300;
-  font-size:60%;
-  text-transform:uppercase;
+  font-weight: 300;
+  font-size: 60%;
+  text-transform: uppercase;
   margin-top: 10px;
 }
+
 .caption p.description {
-  font-weight:100;
-  font-size:80%
+  font-weight: 100;
+  font-size: 80%
 }
+
+@media (max-width: 600px) {
+  section.snapsection {
+    flex-direction: column;
+  }
+
+  .mainimg {
+    width: 100%;
+    height: 50vh; 
+  }
+
+  .caption {
+    width: 100%;
+    height: auto; 
+    padding: 10px;
+  }
+
+  .caption div {
+    padding-bottom: 0;
+    max-width: 90%;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+
 a,
 a:link,
 a:visited {
@@ -134,29 +191,10 @@ a:active,
 a:focus {
   color: var(--link-alt-color);
 }
-@media (min-width:1000px) {
-  .caption {
-    width:400px
-  }
-}
-@media (max-width:1000px) {
-  .mainimg {
-    width:100%
-  }
-  .caption {
-    width:90%
-  }
-  .caption div {
-    width:100%
-  }
-  section.snapsection {
-    flex-direction:column
-  }
-}
 
 .projects-grid {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: stretch;
   gap: 20px;
   padding: 20px;
@@ -199,3 +237,4 @@ a:focus {
 .project-link:hover .project {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
