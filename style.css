@@ -94,7 +94,7 @@ section#end {
   width: 55%;
   text-align: left;
   color: var(--text-color);
-  background-image: url('./images/me_scene2.jpg'); 
+  background-image: url('./images/me_scene.jpg'); 
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -194,10 +194,29 @@ a:focus {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Always 3 columns on desktop */
   align-items: stretch;
   gap: 20px;
   padding: 20px;
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  height: 100%;
 }
 
 .project {
@@ -209,6 +228,7 @@ a:focus {
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
+  height: 100%;
 }
 
 .project h2 {
@@ -236,5 +256,9 @@ a:focus {
 
 .project-link:hover .project {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#projects {
+  scroll-margin-top: -100px;
 }
 
