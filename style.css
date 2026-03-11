@@ -74,6 +74,13 @@ section div.bodytext {
   min-height: 500px
 }
 
+section#projects div.bodytext {
+  padding: 2% 5%;
+  min-height: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 section div.bodytext h1 {
   font-family: var(--title-font-family);
   font-weight: 700;
@@ -194,10 +201,10 @@ a:focus {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(4, 1fr); 
   align-items: stretch;
-  gap: 12px; 
-  padding: 12px; 
+  gap: 10px; 
+  padding: 10px; 
 }
 
 .projects-grid > .project-link {
@@ -232,34 +239,34 @@ a:focus {
 
 .project {
   background-color: var(--caption-bg-color);
-  padding: 12px; 
+  padding: 10px; 
   border-radius: 8px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   box-sizing: border-box;
-  min-height: 160px; 
+  min-height: 120px; 
   height: 100%;
   width: 100%;
 }
 
 .project-icon {
-  font-size: 150%;
+  font-size: 120%;
   color: var(--link-color);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .project h2 {
   font-family: var(--title-font-family);
-  font-size: 120%; 
-  margin-bottom: 6px;
+  font-size: 105%; 
+  margin-bottom: 4px;
   color: var(--link-color);
 }
 
 .project p {
   font-family: var(--body-font-family);
-  font-size: 90%; 
+  font-size: 80%; 
   color: var(--text-color);
   margin: 0;
 }
@@ -279,6 +286,9 @@ a:focus {
 }
 
 #projects {
-  scroll-margin-top: -100px;
+  scroll-margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
