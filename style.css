@@ -7,8 +7,8 @@
   --bg-color:#000;
   --title-font-family:"Bitter";
   --body-font-family:"Source Sans Pro";
-  --link-color:#50C878;
-  --link-alt-color:#9CAF88;
+  --link-color:#4169E1;
+  --link-alt-color:#6495ED;
 }
 * {
   -webkit-font-smoothing: antialiased
@@ -82,7 +82,7 @@ section div.bodytext h1 {
 }
 
 section#end {
-  margin-top: 500px;
+  margin-top: 200px;
 }
 
 .mainimg {
@@ -94,7 +94,7 @@ section#end {
   width: 55%;
   text-align: left;
   color: var(--text-color);
-  background-image: url('./images/me_scene.jpg'); 
+  background-image: url('./images/me1.jpg'); 
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -195,7 +195,7 @@ a:focus {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
-  align-items: start;
+  align-items: stretch;
   gap: 12px; 
   padding: 12px; 
 }
@@ -214,6 +214,12 @@ a:focus {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  .links-bar a {
+    display: inline-block;
+    margin: 6px 4px;
+    font-size: 110%;
+  }
 }
 
 .project-link {
@@ -231,10 +237,17 @@ a:focus {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   box-sizing: border-box;
-  min-height: 110px; 
-  height: 100%; 
+  min-height: 160px; 
+  height: 100%;
+  width: 100%;
+}
+
+.project-icon {
+  font-size: 150%;
+  color: var(--link-color);
+  margin-bottom: 8px;
 }
 
 .project h2 {
@@ -256,7 +269,8 @@ a:focus {
   color: inherit;
 }
 
-.project-link:hover .project h2 {
+.project-link:hover .project h2,
+.project-link:hover .project-icon {
   color: var(--link-alt-color);
 }
 
